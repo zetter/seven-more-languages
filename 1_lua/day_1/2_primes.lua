@@ -46,7 +46,7 @@ print_primes(3)
 print('print_primes(20)')
 print_primes(20)
 
-function print_primes_recusive(num, primes_printed , last_number_checked)
+function print_primes_recusive(num, primes_printed, last_number_checked)
   primes_printed = primes_printed or 0
   last_number_checked = last_number_checked or 0
   if primes_printed == num then
