@@ -45,3 +45,22 @@ print_primes(3)
 
 print('print_primes(20)')
 print_primes(20)
+
+function print_primes_recusive(num, primes_printed , last_number_checked)
+  primes_printed = primes_printed or 0
+  last_number_checked = last_number_checked or 0
+  if primes_printed == num then
+    return
+  elseif is_prime(last_number_checked) then
+    print(last_number_checked)
+    print_primes_recusive(num, primes_printed + 1, last_number_checked + 1)
+  else
+    print_primes_recusive(num, primes_printed, last_number_checked + 1)
+  end
+end
+
+print('print_primes_recusive(3)')
+print_primes_recusive(3)
+
+print('print_primes_recusive(20)')
+print_primes_recusive(20)
